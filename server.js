@@ -6,7 +6,7 @@ const args = minimist(process.argv.slice(2));
 const port = args.port || 5000;
 
 const application = express();
-app.use(express.urlencoded({extended: true}));
+application.use(express.urlencoded({extended: true}));
 
 application.get('/app/', (req, res) => {
     res.send('200 OK');
